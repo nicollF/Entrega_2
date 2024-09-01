@@ -1,0 +1,2414 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Parte 2 - ejercicio práctico 5 &#8212; Ejercicio práctico 5</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Parte2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Parte 1 - ejercicio práctico 5" href="Parte1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/uninortelogo.jpeg" class="logo__image only-light" alt="Ejercicio práctico 5 - Home"/>
+    <script>document.write(`<img src="_static/uninortelogo.jpeg" class="logo__image only-dark" alt="Ejercicio práctico 5 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Parte1.html"><strong>Parte 1 - ejercicio práctico 5</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Parte 2 - ejercicio práctico 5</strong></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FParte2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Parte2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Parte 2 - ejercicio práctico 5</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-iniciales"><strong>Análisis iniciales</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrando-por-el-tipo-de-producto"><strong>Filtrando por el tipo de producto</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gasolina"><strong>Gasolina</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#otros-analisis"><strong>Otros análisis:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel"><strong><strong>Diesel</strong></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Otros análisis:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extra"><strong><strong>Extra</strong></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Otros análisis:</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#georeferenciacion-precio-de-la-gasolina-por-departamento"><strong>Georeferenciación: precio de la gasolina por departamento</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="parte-2-ejercicio-practico-5">
+<h1><strong>Parte 2 - ejercicio práctico 5</strong><a class="headerlink" href="#parte-2-ejercicio-practico-5" title="Link to this heading">#</a></h1>
+<section id="analisis-iniciales">
+<h2><strong>Análisis iniciales</strong><a class="headerlink" href="#analisis-iniciales" title="Link to this heading">#</a></h2>
+<p>En esta parte del trabajo se hará un análisis de los precios del combustible en colombia en el año 2023.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">missingno</span> <span class="k">as</span> <span class="nn">msno</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">fancyimpute</span> <span class="kn">import</span> <span class="n">IterativeImputer</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lectura de datasets:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combustible_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;C:/Users/fonta/OneDrive/Documentos/CDD/6. Sexto semestre/Visualizacion de datos/Corte 1/Entrega2/Entrega 2/2023_I.csv&quot;</span><span class="p">)</span>
+<span class="n">combustible_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;C:/Users/fonta/OneDrive/Documentos/CDD/6. Sexto semestre/Visualizacion de datos/Corte 1/Entrega2/Entrega 2/2023_II.csv&quot;</span><span class="p">)</span>
+<span class="n">combustible_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;C:/Users/fonta/OneDrive/Documentos/CDD/6. Sexto semestre/Visualizacion de datos/Corte 1/Entrega2/Entrega 2/2023_III.csv&quot;</span><span class="p">)</span>
+<span class="n">combustible_4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;C:/Users/fonta/OneDrive/Documentos/CDD/6. Sexto semestre/Visualizacion de datos/Corte 1/Entrega2/Entrega 2/2023_IV.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_2023</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">combustible_1</span><span class="p">,</span> <span class="n">combustible_2</span><span class="p">,</span> <span class="n">combustible_3</span><span class="p">,</span> <span class="n">combustible_4</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_2023</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BANDERA</th>
+      <th>NOMBRE COMERCIAL</th>
+      <th>PRODUCTO</th>
+      <th>FECHA REGISTRO</th>
+      <th>DEPARTAMENTO</th>
+      <th>MUNICIPIO</th>
+      <th>VALOR PRECIO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO SERVICENTRO LA PEDRERA</td>
+      <td>DIESEL</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LA PEDRERA</td>
+      <td>15000.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO SERVICENTRO LA PEDRERA</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LA PEDRERA</td>
+      <td>15500.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TERPEL</td>
+      <td>BALSA EL CONDOR</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>11380.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>TERPEL</td>
+      <td>BALSA EL CONDOR</td>
+      <td>DIESEL</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>10840.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO DISTRIBUIDORA LOS COMUNEROS</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>11380.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO DISTRIBUIDORA LOS COMUNEROS</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>11380.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO DISTRIBUIDORA LOS COMUNEROS</td>
+      <td>DIESEL</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>10671.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>TEXACO</td>
+      <td>EDS COMDECOM ABRIAQUI</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>ABRIAQUÍ</td>
+      <td>11870.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>TEXACO</td>
+      <td>EDS COMDECOM ABRIAQUI</td>
+      <td>DIESEL</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>ABRIAQUÍ</td>
+      <td>10910.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>TEXACO</td>
+      <td>ESTACIÓN DE SERVICIO Y MALL SANTA LUCIA S.A.S.</td>
+      <td>DIESEL</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>AMAGÁ</td>
+      <td>9610.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_2023</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(270276, 7)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Al hacer la únion de todos los trimenstres del 2023 y guardarlo en un nuevo dataframe: “df_2023”, se tienen un total de 270.276 registros con 7 variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_2023</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;BANDERA&#39;, &#39;NOMBRE COMERCIAL&#39;, &#39;PRODUCTO&#39;, &#39;FECHA REGISTRO&#39;,
+       &#39;DEPARTAMENTO&#39;, &#39;MUNICIPIO&#39;, &#39;VALOR PRECIO&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_2023</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;bandera&quot;</span><span class="p">,</span> <span class="s2">&quot;nombreCo&quot;</span><span class="p">,</span> <span class="s2">&quot;producto&quot;</span><span class="p">,</span><span class="s2">&quot;fecha&quot;</span><span class="p">,</span><span class="s2">&quot;depto&quot;</span><span class="p">,</span><span class="s2">&quot;munic&quot;</span><span class="p">,</span><span class="s2">&quot;valor&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En la variable “bandera” se tienen los nombres de las distribuidoras del combustible:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_2023</span><span class="p">[</span><span class="s2">&quot;bandera&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;TERPEL&#39;, &#39;TEXACO&#39;, &#39;PRIMAX&#39;, &#39;ZEUSS\xa0&#39;, &#39;BIOMAX&#39;,
+       &#39;PETROMIL\xa0&#39;, &#39;PETROBRAS&#39;, &#39;ESSO&#39;, &#39;BRIO\xa0&#39;, &#39;PUMA&#39;,
+       &#39;PLUS MAS&#39;, &#39;ECOS&#39;, &#39;OCTANO&#39;, &#39;AYATAWACOOP&#39;, &#39;DISCOWACOOP&#39;,
+       &#39;COOMULPINORT&#39;, &#39;DISCOM&#39;, &#39;P Y B&#39;, &#39;PETRODECOL&#39;, &#39;PETRDECOL&#39;,
+       &#39;SAVE&#39;, &#39;PROXXON&#39;, &#39;ZAPATA Y VELASQUEZ\xa0&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df_2023</span><span class="p">[</span><span class="s2">&quot;bandera&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Productos</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_2023</span><span class="p">[</span><span class="s2">&quot;producto&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>producto
+GASOLINA MOTOR    124118
+DIESEL            112801
+EXTRA              33357
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="filtrando-por-el-tipo-de-producto">
+<h2><strong>Filtrando por el tipo de producto</strong><a class="headerlink" href="#filtrando-por-el-tipo-de-producto" title="Link to this heading">#</a></h2>
+<p>Para poder hacer el estudio de cada uno de los tipos de combustibles filtremos nuestra base de datos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gasolina</span><span class="o">=</span><span class="n">df_2023</span><span class="p">[</span><span class="n">df_2023</span><span class="p">[</span><span class="s2">&quot;producto&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;GASOLINA MOTOR&quot;</span><span class="p">]</span>
+<span class="n">diesel</span> <span class="o">=</span><span class="n">df_2023</span><span class="p">[</span><span class="n">df_2023</span><span class="p">[</span><span class="s2">&quot;producto&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;DIESEL&quot;</span><span class="p">]</span>
+<span class="n">extra</span> <span class="o">=</span><span class="n">df_2023</span><span class="p">[</span><span class="n">df_2023</span><span class="p">[</span><span class="s2">&quot;producto&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;EXTRA&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gasolina</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bandera</th>
+      <th>nombreCo</th>
+      <th>producto</th>
+      <th>fecha</th>
+      <th>depto</th>
+      <th>munic</th>
+      <th>valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO SERVICENTRO LA PEDRERA</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LA PEDRERA</td>
+      <td>15500.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TERPEL</td>
+      <td>BALSA EL CONDOR</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>11380.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO DISTRIBUIDORA LOS COMUNEROS</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>11380.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO DISTRIBUIDORA LOS COMUNEROS</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>11380.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>TEXACO</td>
+      <td>EDS COMDECOM ABRIAQUI</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>ABRIAQUÍ</td>
+      <td>11870.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diesel</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bandera</th>
+      <th>nombreCo</th>
+      <th>producto</th>
+      <th>fecha</th>
+      <th>depto</th>
+      <th>munic</th>
+      <th>valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO SERVICENTRO LA PEDRERA</td>
+      <td>DIESEL</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LA PEDRERA</td>
+      <td>15000.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>TERPEL</td>
+      <td>BALSA EL CONDOR</td>
+      <td>DIESEL</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>10840.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO DISTRIBUIDORA LOS COMUNEROS</td>
+      <td>DIESEL</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>10671.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>TEXACO</td>
+      <td>EDS COMDECOM ABRIAQUI</td>
+      <td>DIESEL</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>ABRIAQUÍ</td>
+      <td>10910.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>TEXACO</td>
+      <td>ESTACIÓN DE SERVICIO Y MALL SANTA LUCIA S.A.S.</td>
+      <td>DIESEL</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>AMAGÁ</td>
+      <td>9610.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">extra</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bandera</th>
+      <th>nombreCo</th>
+      <th>producto</th>
+      <th>fecha</th>
+      <th>depto</th>
+      <th>munic</th>
+      <th>valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO POPALITO</td>
+      <td>EXTRA</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>BARBOSA</td>
+      <td>18760.0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO PUERTAS DEL NORDESTE</td>
+      <td>EXTRA</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>BARBOSA</td>
+      <td>19400.0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>PRIMAX</td>
+      <td>ESTACION DE SERVICIO PRIMAX AUTOPISTA</td>
+      <td>EXTRA</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>BELLO</td>
+      <td>19580.0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>TERPEL</td>
+      <td>TERPEL FONTIDUENO</td>
+      <td>EXTRA</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>BELLO</td>
+      <td>20520.0</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>ZEUSS</td>
+      <td>ESTACION DE SERVICIO LA CRISTALINA</td>
+      <td>EXTRA</td>
+      <td>01-Jan-2023</td>
+      <td>ANTIOQUIA</td>
+      <td>CISNEROS</td>
+      <td>20000.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="gasolina">
+<h3><strong>Gasolina</strong><a class="headerlink" href="#gasolina" title="Link to this heading">#</a></h3>
+<p>Veamos como se comporta el valor de la gasolina en el 2023</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gasolina</span><span class="p">[</span><span class="s2">&quot;valor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    124118.000000
+mean      11511.661371
+std        2150.744335
+min        1000.000000
+25%        9721.000000
+50%       11200.000000
+75%       13148.000000
+max       26000.000000
+Name: valor, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">gasolina</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#B452CD&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Valor Precio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Precio Gasolina&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/e4bb50d3d606137f7c4ef4a574ce9b0f43ad7cc6fe9ca63ae787d269c8a7a8bb.png" src="_images/e4bb50d3d606137f7c4ef4a574ce9b0f43ad7cc6fe9ca63ae787d269c8a7a8bb.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Datos faltantes: &quot;</span><span class="p">,</span><span class="n">gasolina</span><span class="p">[</span><span class="s2">&quot;valor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Datos faltantes:  0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con lo anterior, vemos que no existen datos faltantes, pero el boxplot muestra la presencia de datos atípicos, los cuales buscaremos imputar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">detect_outliers_zscore</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">outliers</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">thres</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="n">z_score</span> <span class="o">=</span> <span class="p">(</span><span class="n">value</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">std</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">z_score</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">thres</span><span class="p">:</span>
+            <span class="n">outliers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">outliers</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out</span><span class="o">=</span><span class="n">detect_outliers_zscore</span><span class="p">(</span><span class="n">gasolina</span><span class="p">[</span><span class="s2">&quot;valor&quot;</span><span class="p">])</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>194
+</pre></div>
+</div>
+</div>
+</div>
+<p>Existen 194 valores atípicos en el precio de la gasolina, hagamos su respectiva imputación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gasolina</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">out</span><span class="p">,</span> <span class="n">gasolina</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="s1">&#39;valor&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imp</span> <span class="o">=</span> <span class="n">IterativeImputer</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Imputar los datos faltantes</span>
+<span class="n">gasolina_imputado</span> <span class="o">=</span> <span class="n">gasolina</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">gasolina_imputado</span><span class="p">[[</span><span class="s1">&#39;valor&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">gasolina</span><span class="p">[[</span><span class="s1">&#39;valor&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">gasolina_imputado</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#B452CD&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Valor Precio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Precio Gasolina&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0c0ddbbd96813b1cf2ac63b29d34e0c0145f870b9ac345fe13ab04b61dbfdca6.png" src="_images/0c0ddbbd96813b1cf2ac63b29d34e0c0145f870b9ac345fe13ab04b61dbfdca6.png" />
+</div>
+</div>
+<p>Con esto se logró hacer la imputacion de los valores extremos del precio de la gasolina en 2023, detectamos los valores atípicos con los z_scores, e imputamos con el metodo iterativo. La idea es realizar este mismo proceso con los otros dos productos.</p>
+<section id="otros-analisis">
+<h4><strong>Otros análisis:</strong><a class="headerlink" href="#otros-analisis" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gas_bandera</span> <span class="o">=</span> <span class="n">gasolina_imputado</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;bandera&#39;</span><span class="p">)[</span><span class="s1">&#39;valor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">gas_bandera</span> <span class="o">=</span> <span class="n">gas_bandera</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">gas_bandera</span><span class="o">=</span><span class="n">gas_bandera</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">gas_bandera</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;bandera&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#B452CD&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Bandera&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;precio por bandera&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/e2fd63ee97edc743093b3522fdd90f2f1f009b18ec91e4c6809a1f7ed7901133.png" src="_images/e2fd63ee97edc743093b3522fdd90f2f1f009b18ec91e4c6809a1f7ed7901133.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gas_bandera</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bandera</th>
+      <th>valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>8</th>
+      <td>OCTANO</td>
+      <td>15055.586120</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>ZAPATA Y VELASQUEZ</td>
+      <td>13256.937617</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DISCOWACOOP</td>
+      <td>12626.782638</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>P Y B</td>
+      <td>12623.236066</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>DISCOM</td>
+      <td>12473.824951</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>AYATAWACOOP</td>
+      <td>12460.534267</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>PROXXON</td>
+      <td>12071.214107</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>PLUS MAS</td>
+      <td>12020.698180</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>ZEUSS</td>
+      <td>11941.724569</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>SAVE</td>
+      <td>11677.948148</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>TEXACO</td>
+      <td>11639.399310</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>COOMULPINORT</td>
+      <td>11568.623706</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>De la gráfica anterior,se muestran las 12 empresas distribuidoras de gasolina con los precios mas altos en colombia en el 2023. siendo “OCTANO” con el valor mas alto 15055.</p>
+</section>
+</section>
+<section id="diesel">
+<h3><strong><strong>Diesel</strong></strong><a class="headerlink" href="#diesel" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diesel</span><span class="p">[</span><span class="s2">&quot;valor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    112801.000000
+mean       9145.494473
+std         908.419814
+min           0.000000
+25%        8750.000000
+50%        9245.000000
+75%        9580.000000
+max       71590.000000
+Name: valor, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">diesel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#B452CD&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Valor Precio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Precio Diesel&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/7aff76bce5cfba7ccbb973f702f6f33ba705c3a77f066efc4a8bf6bb3288a194.png" src="_images/7aff76bce5cfba7ccbb973f702f6f33ba705c3a77f066efc4a8bf6bb3288a194.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Datos faltantes: &quot;</span><span class="p">,</span><span class="n">diesel</span><span class="p">[</span><span class="s2">&quot;valor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Datos faltantes:  0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vemos que en el precio del diesel, tampoco hay valores faltantes pero si una gran cantidad de valores atípicos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">detect_outliers_zscore2</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">outliers</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">thres</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="n">z_score</span> <span class="o">=</span> <span class="p">(</span><span class="n">value</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">std</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">z_score</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">thres</span><span class="p">:</span>
+            <span class="n">outliers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">outliers</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out</span><span class="o">=</span><span class="n">detect_outliers_zscore2</span><span class="p">(</span><span class="n">diesel</span><span class="p">[</span><span class="s2">&quot;valor&quot;</span><span class="p">])</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5408
+</pre></div>
+</div>
+</div>
+</div>
+<p>Existen 8614 valores por fuera de 2*RIQ.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diesel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">out</span><span class="p">,</span> <span class="n">diesel</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="s1">&#39;valor&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imp</span> <span class="o">=</span> <span class="n">IterativeImputer</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Imputar los datos faltantes</span>
+<span class="n">diesel_imputado</span> <span class="o">=</span> <span class="n">diesel</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">diesel_imputado</span><span class="p">[[</span><span class="s1">&#39;valor&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">diesel</span><span class="p">[[</span><span class="s1">&#39;valor&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">diesel_imputado</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#B452CD&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Valor Precio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Precio Diesel&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/30b579b3a0770bc8435afc146e62f97f951d90cb83fc949abd77ae49ae113ccf.png" src="_images/30b579b3a0770bc8435afc146e62f97f951d90cb83fc949abd77ae49ae113ccf.png" />
+</div>
+</div>
+<p>Vemos que en este caso, a diferencia de la gasolina, parece ser que no se detectaron todos los datos, puesto que nuestra función para detectarlos solo está tomando los que están por fuera de 2 veces el RIQ. Pero aun así hubo una gran mejoría con la imputación de los datos más extremos.</p>
+<section id="id1">
+<h4><strong>Otros análisis:</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diesel_bandera</span> <span class="o">=</span> <span class="n">diesel_imputado</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;bandera&#39;</span><span class="p">)[</span><span class="s1">&#39;valor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">diesel_bandera</span> <span class="o">=</span> <span class="n">diesel_bandera</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">diesel_bandera</span><span class="o">=</span><span class="n">diesel_bandera</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">diesel_bandera</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;bandera&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#B452CD&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Bandera&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;precio por bandera&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/8fe07871caa6c8db9253b846f3789e9655c3f0e648ca2da80fd6e509431193d9.png" src="_images/8fe07871caa6c8db9253b846f3789e9655c3f0e648ca2da80fd6e509431193d9.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diesel_bandera</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bandera</th>
+      <th>valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>16</th>
+      <td>PROXXON</td>
+      <td>9683.888889</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>DISCOM</td>
+      <td>9569.589836</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>PLUS MAS</td>
+      <td>9547.763667</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>ZEUSS</td>
+      <td>9508.791191</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>OCTANO</td>
+      <td>9493.000870</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>ZAPATA Y VELASQUEZ</td>
+      <td>9468.124604</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>TEXACO</td>
+      <td>9333.599629</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BIOMAX</td>
+      <td>9312.636716</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>PRIMAX</td>
+      <td>9281.352108</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>PETRDECOL</td>
+      <td>9278.136379</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BRIO</td>
+      <td>9264.858896</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>ESSO</td>
+      <td>9201.224859</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Vemos con este análisis que el precio del diesel por bandera no cambia mucho, estas 12 empresas con el diesel mas alto tienen precios cercanos a 9.300.</p>
+</section>
+</section>
+<section id="extra">
+<h3><strong><strong>Extra</strong></strong><a class="headerlink" href="#extra" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">extra</span><span class="p">[</span><span class="s2">&quot;valor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     33357.000000
+mean      18818.501244
+std        2878.162380
+min        1000.000000
+25%       18890.000000
+50%       19490.000000
+75%       19980.000000
+max      200000.000000
+Name: valor, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Desde este punto ya podemos hacernos una idea de que ese valor máximo en el valor del combustible extra puede ser un error de digitación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">extra</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#B452CD&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Valor Precio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Precio Extra&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1d6530037502509f5d64fe538b71418ce52ca7c1e60f4a001c6a514f6014b872.png" src="_images/1d6530037502509f5d64fe538b71418ce52ca7c1e60f4a001c6a514f6014b872.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Datos faltantes: &quot;</span><span class="p">,</span><span class="n">extra</span><span class="p">[</span><span class="s2">&quot;valor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Datos faltantes:  0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Este es el peor de los casos entre los 3 productos, la distribución de la variable no es clara, por tanto se necesita de la imputación, en este caso tampoco se tienen datos faltantes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out</span><span class="o">=</span><span class="n">detect_outliers_zscore2</span><span class="p">(</span><span class="n">extra</span><span class="p">[</span><span class="s2">&quot;valor&quot;</span><span class="p">])</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2373
+</pre></div>
+</div>
+</div>
+</div>
+<p>Existen 2373 datos por fuera de 2*RIQ.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">extra</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">out</span><span class="p">,</span> <span class="n">extra</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="s1">&#39;valor&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imp</span> <span class="o">=</span> <span class="n">IterativeImputer</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Imputar los datos faltantes</span>
+<span class="n">extra_imputado</span> <span class="o">=</span> <span class="n">extra</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">extra_imputado</span><span class="p">[[</span><span class="s1">&#39;valor&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">extra</span><span class="p">[[</span><span class="s1">&#39;valor&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">diesel_imputado</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#B452CD&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Valor Precio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Precio Extra&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0a85be29d41153fa835e0d3bab8a84c06d16d9e8a74bdeae4c8928818aa3a15d.png" src="_images/0a85be29d41153fa835e0d3bab8a84c06d16d9e8a74bdeae4c8928818aa3a15d.png" />
+</div>
+</div>
+<p>En el caso del combustible extra pasó algo similar a con el diesel, con la imputación mejoró la distribución de la variable, aun cuando se siguen presentando datos atípicos, esto es razonable, puesto que el valor del extra varía en gran manera.</p>
+<section id="id2">
+<h4><strong>Otros análisis:</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">extra_bandera</span> <span class="o">=</span> <span class="n">extra_imputado</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;bandera&#39;</span><span class="p">)[</span><span class="s1">&#39;valor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">extra_bandera</span> <span class="o">=</span> <span class="n">extra_bandera</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">extra_bandera</span><span class="o">=</span><span class="n">extra_bandera</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">extra_bandera</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;bandera&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#B452CD&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Bandera&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;precio por bandera&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/236d3e0d8f124540f262d5fc8365ef5e651ecd3701291fbd756ae85e2661bb56.png" src="_images/236d3e0d8f124540f262d5fc8365ef5e651ecd3701291fbd756ae85e2661bb56.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">extra_bandera</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bandera</th>
+      <th>valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AYATAWACOOP</td>
+      <td>13689.153846</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>ZAPATA Y VELASQUEZ</td>
+      <td>18047.000000</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>PETRDECOL</td>
+      <td>18195.088471</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>ECOS</td>
+      <td>18578.220683</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>PROXXON</td>
+      <td>18687.927373</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>PETROMIL</td>
+      <td>19142.545696</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>TERPEL</td>
+      <td>19191.113516</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>PUMA</td>
+      <td>19316.733195</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>DISCOM</td>
+      <td>19337.311812</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>COOMULPINORT</td>
+      <td>19346.604275</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>PETRODECOL</td>
+      <td>19415.491609</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>P Y B</td>
+      <td>19415.491609</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Puesto que el combustible “Extra” es el que tiene el precio promedio mas alto, con la grafica anterior vemos que la bandera “AYATAWACOOP” es el que tiene menor precio promedio 13.600, a diferencia de las otras empresas que sus precios ya rodean los 20.000 pesos colombianos.</p>
+</section>
+</section>
+</section>
+<section id="georeferenciacion-precio-de-la-gasolina-por-departamento">
+<h2><strong>Georeferenciación: precio de la gasolina por departamento</strong><a class="headerlink" href="#georeferenciacion-precio-de-la-gasolina-por-departamento" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span> 
+<span class="kn">import</span> <span class="nn">descartes</span>    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapa_col</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;COLOMBIA/COLOMBIA.shp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gasolina_map</span><span class="o">=</span><span class="n">gasolina_imputado</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dpto_1</span> <span class="o">=</span> <span class="n">gasolina_map</span><span class="p">[</span><span class="s1">&#39;depto&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">dpto_2</span> <span class="o">=</span> <span class="n">mapa_col</span><span class="p">[</span><span class="s1">&#39;DPTO_CNMBR&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1"># Encontrar los índices donde los valores de dpto_1 no están en dpto_2</span>
+<span class="n">M1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">dpto_1</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">dpto_2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Retorna los índices de los valores no coincidentes</span>
+
+<span class="c1"># Reemplazar &quot;?&quot; con &quot;ñ&quot; en dpto_2</span>
+<span class="n">dpto_2</span> <span class="o">=</span> <span class="n">dpto_2</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;\?&quot;</span><span class="p">,</span> <span class="s2">&quot;ñ&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Reemplazar &quot;archipielago de san andres&quot; con el texto completo en dpto_2</span>
+<span class="n">dpto_2</span> <span class="o">=</span> <span class="n">dpto_2</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;archipielago de san andres&quot;</span><span class="p">,</span> 
+                            <span class="s2">&quot;archipielago de san andres, santa catalina y providencia&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">M1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">dpto_1</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">dpto_2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> 
+
+<span class="c1"># Añadir las columnas &#39;codigo&#39; con los valores modificados</span>
+<span class="n">gasolina_map</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;codigo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dpto_1</span>
+<span class="n">mapa_col</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;codigo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dpto_2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gasolina_map</span><span class="p">[</span><span class="s2">&quot;codigo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dpto_1</span>
+<span class="n">mapa_col</span><span class="p">[</span><span class="s2">&quot;codigo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dpto_2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Datos_tot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">mapa_col</span><span class="p">,</span> <span class="n">gasolina_map</span> <span class="p">,</span> <span class="n">on</span> <span class="o">=</span><span class="s1">&#39;codigo&#39;</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+<span class="n">Datos_tot</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>OBJECTID</th>
+      <th>DPTO_CCDGO</th>
+      <th>DPTO_NANO_</th>
+      <th>DPTO_CNMBR</th>
+      <th>DPTO_CACTO</th>
+      <th>DPTO_NAREA</th>
+      <th>DPTO_CSMBL</th>
+      <th>DPTO_NANO</th>
+      <th>PAIS_PAIS_</th>
+      <th>SHAPE_Leng</th>
+      <th>SHAPE_Area</th>
+      <th>geometry</th>
+      <th>codigo</th>
+      <th>bandera</th>
+      <th>nombreCo</th>
+      <th>producto</th>
+      <th>fecha</th>
+      <th>depto</th>
+      <th>munic</th>
+      <th>valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>28</td>
+      <td>91</td>
+      <td>1991</td>
+      <td>AMAZONAS</td>
+      <td>Decreto 2274 del 4 de Octubre de la Constituci...</td>
+      <td>1.100465e+11</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>28</td>
+      <td>24.747842</td>
+      <td>8.921607</td>
+      <td>POLYGON ((-71.29212 0.06821, -71.28829 0.06762...</td>
+      <td>amazonas</td>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO SERVICENTRO LA PEDRERA</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LA PEDRERA</td>
+      <td>15500.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>28</td>
+      <td>91</td>
+      <td>1991</td>
+      <td>AMAZONAS</td>
+      <td>Decreto 2274 del 4 de Octubre de la Constituci...</td>
+      <td>1.100465e+11</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>28</td>
+      <td>24.747842</td>
+      <td>8.921607</td>
+      <td>POLYGON ((-71.29212 0.06821, -71.28829 0.06762...</td>
+      <td>amazonas</td>
+      <td>TERPEL</td>
+      <td>BALSA EL CONDOR</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>11380.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>28</td>
+      <td>91</td>
+      <td>1991</td>
+      <td>AMAZONAS</td>
+      <td>Decreto 2274 del 4 de Octubre de la Constituci...</td>
+      <td>1.100465e+11</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>28</td>
+      <td>24.747842</td>
+      <td>8.921607</td>
+      <td>POLYGON ((-71.29212 0.06821, -71.28829 0.06762...</td>
+      <td>amazonas</td>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO DISTRIBUIDORA LOS COMUNEROS</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jan-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>11380.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos_unidos2</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">Datos_tot</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;codigo&#39;</span><span class="p">,</span> <span class="s1">&#39;DPTO_NANO_&#39;</span><span class="p">,</span> <span class="s1">&#39;DPTO_NAREA&#39;</span><span class="p">,</span> <span class="s1">&#39;DPTO_CSMBL&#39;</span><span class="p">,</span> <span class="s1">&#39;DPTO_NANO&#39;</span><span class="p">,</span> <span class="s1">&#39;PAIS_PAIS_&#39;</span><span class="p">,</span> <span class="s1">&#39;SHAPE_Leng&#39;</span><span class="p">,</span> <span class="s1">&#39;SHAPE_Area&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Agrupa los datos y evita usar los grupos como índice</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">precio_prom_dpto</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">))</span>  <span class="c1"># Calcula la media de &#39;valor&#39; y la asigna a &#39;precio_prom_dpto&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos_unidos2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>codigo</th>
+      <th>DPTO_NANO_</th>
+      <th>DPTO_NAREA</th>
+      <th>DPTO_CSMBL</th>
+      <th>DPTO_NANO</th>
+      <th>PAIS_PAIS_</th>
+      <th>SHAPE_Leng</th>
+      <th>SHAPE_Area</th>
+      <th>precio_prom_dpto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>amazonas</td>
+      <td>1991</td>
+      <td>1.100465e+11</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>28</td>
+      <td>24.747842</td>
+      <td>8.921607</td>
+      <td>13328.388102</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>antioquia</td>
+      <td>1886</td>
+      <td>6.306333e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>1</td>
+      <td>21.137035</td>
+      <td>5.155783</td>
+      <td>12067.008808</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>arauca</td>
+      <td>1991</td>
+      <td>2.380556e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>25</td>
+      <td>9.162939</td>
+      <td>1.940327</td>
+      <td>11894.656981</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>archipielago de san andres, santa catalina y p...</td>
+      <td>1991</td>
+      <td>4.960214e+04</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>12</td>
+      <td>0.650698</td>
+      <td>0.004064</td>
+      <td>13112.397849</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>atlantico</td>
+      <td>1910</td>
+      <td>3.326730e+09</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>2</td>
+      <td>2.461077</td>
+      <td>0.274825</td>
+      <td>11418.952548</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>bogota d.c.</td>
+      <td>0</td>
+      <td>1.633209e+09</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>3</td>
+      <td>3.731288</td>
+      <td>0.133045</td>
+      <td>11521.983851</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>bolivar</td>
+      <td>1886</td>
+      <td>2.666559e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>4</td>
+      <td>15.706980</td>
+      <td>2.191055</td>
+      <td>11575.244924</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>boyaca</td>
+      <td>1886</td>
+      <td>2.307705e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>5</td>
+      <td>15.280968</td>
+      <td>1.883315</td>
+      <td>12160.182093</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>caldas</td>
+      <td>1905</td>
+      <td>7.415933e+09</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>6</td>
+      <td>6.614200</td>
+      <td>0.604712</td>
+      <td>11913.007037</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>caqueta</td>
+      <td>1981</td>
+      <td>9.007665e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>7</td>
+      <td>19.850907</td>
+      <td>7.316017</td>
+      <td>12169.220745</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>casanare</td>
+      <td>1991</td>
+      <td>4.448400e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>26</td>
+      <td>11.830742</td>
+      <td>3.622186</td>
+      <td>11974.697711</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>cauca</td>
+      <td>1857</td>
+      <td>3.064331e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>8</td>
+      <td>13.352092</td>
+      <td>2.485633</td>
+      <td>11883.314142</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>cesar</td>
+      <td>1967</td>
+      <td>2.228367e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>9</td>
+      <td>12.597031</td>
+      <td>1.834978</td>
+      <td>9949.144785</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>choco</td>
+      <td>1947</td>
+      <td>4.757908e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>12</td>
+      <td>19.085028</td>
+      <td>3.876418</td>
+      <td>12483.999044</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>cordoba</td>
+      <td>1951</td>
+      <td>2.504194e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>10</td>
+      <td>8.982757</td>
+      <td>2.053760</td>
+      <td>12090.208997</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>cundinamarca</td>
+      <td>1886</td>
+      <td>2.236838e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>11</td>
+      <td>12.960193</td>
+      <td>1.823363</td>
+      <td>11906.584111</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>guainia</td>
+      <td>1991</td>
+      <td>7.156745e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>29</td>
+      <td>19.493315</td>
+      <td>5.769826</td>
+      <td>13581.208473</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>guaviare</td>
+      <td>1991</td>
+      <td>5.545392e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>30</td>
+      <td>18.739054</td>
+      <td>4.501348</td>
+      <td>13300.680097</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>huila</td>
+      <td>1905</td>
+      <td>1.871102e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>13</td>
+      <td>9.803136</td>
+      <td>1.520385</td>
+      <td>11937.419309</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>la guajira</td>
+      <td>1964</td>
+      <td>2.067067e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>14</td>
+      <td>10.168370</td>
+      <td>1.711062</td>
+      <td>12516.543926</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>magdalena</td>
+      <td>0</td>
+      <td>2.320573e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>15</td>
+      <td>10.747550</td>
+      <td>1.914917</td>
+      <td>11630.500606</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>meta</td>
+      <td>1959</td>
+      <td>8.548555e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>16</td>
+      <td>17.455890</td>
+      <td>6.951611</td>
+      <td>12183.119838</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>nariño</td>
+      <td>1904</td>
+      <td>3.164991e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>17</td>
+      <td>10.819582</td>
+      <td>2.560667</td>
+      <td>10366.333124</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>norte de santander</td>
+      <td>1910</td>
+      <td>2.202302e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>18</td>
+      <td>11.128765</td>
+      <td>1.805850</td>
+      <td>11255.149293</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>putumayo</td>
+      <td>1991</td>
+      <td>2.589376e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>27</td>
+      <td>12.672464</td>
+      <td>2.101163</td>
+      <td>11491.576943</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>quindio</td>
+      <td>1966</td>
+      <td>1.935384e+09</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>19</td>
+      <td>2.507765</td>
+      <td>0.157564</td>
+      <td>11809.498492</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>risaralda</td>
+      <td>1966</td>
+      <td>3.978381e+09</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>20</td>
+      <td>5.135623</td>
+      <td>0.324123</td>
+      <td>11683.176848</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>santander</td>
+      <td>1910</td>
+      <td>3.059683e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>21</td>
+      <td>11.452211</td>
+      <td>2.501891</td>
+      <td>11398.438387</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>sucre</td>
+      <td>1966</td>
+      <td>1.070915e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>22</td>
+      <td>8.133088</td>
+      <td>0.880406</td>
+      <td>11603.493722</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>tolima</td>
+      <td>1909</td>
+      <td>2.398336e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>23</td>
+      <td>9.315385</td>
+      <td>1.952249</td>
+      <td>11752.964989</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>valle del cauca</td>
+      <td>1910</td>
+      <td>2.126936e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>24</td>
+      <td>10.439368</td>
+      <td>1.728411</td>
+      <td>11655.364333</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>vaupes</td>
+      <td>1991</td>
+      <td>5.354358e+10</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>31</td>
+      <td>19.242591</td>
+      <td>4.333330</td>
+      <td>13328.713038</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>vichada</td>
+      <td>1991</td>
+      <td>1.000144e+11</td>
+      <td>3</td>
+      <td>2005</td>
+      <td>32</td>
+      <td>17.181693</td>
+      <td>8.096236</td>
+      <td>11987.960208</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapa_col</span><span class="p">[</span><span class="s1">&#39;promedio_precio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datos_unidos2</span><span class="p">[</span><span class="s2">&quot;precio_prom_dpto&quot;</span><span class="p">]</span>
+
+<span class="n">mapa_col</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapa_col</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;promedio_precio&quot;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">18</span><span class="p">),</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Purples&quot;</span><span class="p">)</span>
+
+<span class="c1"># Los siguientes códigos permiten incluir los nombres de los municipios</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">row</span> <span class="ow">in</span> <span class="n">mapa_col</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">xy</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">coords</span><span class="p">[:]</span>
+    <span class="n">xytext</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">coords</span><span class="p">[:]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;DPTO_CNMBR&#39;</span><span class="p">],</span><span class="n">xy</span><span class="o">=</span><span class="n">xy</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xytext</span><span class="o">=</span><span class="n">xytext</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>  <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span><span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3f411dfc55f93ed12a7c9bc589823e417164c51dc2108d9dab3b01e79e6b767e.png" src="_images/3f411dfc55f93ed12a7c9bc589823e417164c51dc2108d9dab3b01e79e6b767e.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Parte1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Parte 1 - ejercicio práctico 5</strong></p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-iniciales"><strong>Análisis iniciales</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrando-por-el-tipo-de-producto"><strong>Filtrando por el tipo de producto</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gasolina"><strong>Gasolina</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#otros-analisis"><strong>Otros análisis:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel"><strong><strong>Diesel</strong></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Otros análisis:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extra"><strong><strong>Extra</strong></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Otros análisis:</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#georeferenciacion-precio-de-la-gasolina-por-departamento"><strong>Georeferenciación: precio de la gasolina por departamento</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nicoll Fontalvo
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
